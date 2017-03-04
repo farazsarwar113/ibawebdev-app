@@ -1,4 +1,4 @@
-<div layout="column" style="height:100vh;" ng-cloak>
+<div layout="column" style="height:100vh;" ng-cloak id="product">
 
   <section layout="row" flex>
 
@@ -39,37 +39,38 @@
 
     </md-sidenav>
     </md-content>
+  <div>
 
     <!-- exact table from live demo -->
     <md-table-container>
       <table md-table md-row-select multiple ng-model="selected" md-progress="promise">
         <thead md-head md-order="query.order" md-on-reorder="getDesserts">
         <tr md-row>
-          <th md-column md-order-by="nameToLower"><span>Dessert (100g serving)</span></th>
-          <th md-column md-numeric md-order-by="calories.value"><span>Calories</span></th>
-          <th md-column md-numeric>Fat (g)</th>
-          <th md-column md-numeric>Carbs (g)</th>
-          <th md-column md-numeric>Protein (g)</th>
-          <th md-column md-numeric>Sodium (mg)</th>
-          <th md-column md-numeric>Calcium (%)</th>
-          <th md-column md-numeric>Iron (%)</th>
+          <th md-column md-order-by="nameToLower"><span>Name</span></th>
+          <th md-column md-numeric md-order-by="calories.value"><span>Price ($)</span></th>
+          <th md-column md-numeric>Company</th>
+          <th md-column md-numeric>Type</th>
+          <th md-column md-numeric>Supplier</th>
+          <th md-column>Action</th>
         </tr>
         </thead>
         <tbody md-body>
-        <tr md-row md-select="dessert" md-select-id="name" md-auto-select ng-repeat="dessert in desserts.data">
-          <td md-cell>{{dessert.name}}</td>
-          <td md-cell>{{dessert.calories.value}}</td>
-          <td md-cell>{{dessert.fat.value | number: 1}}</td>
-          <td md-cell>{{dessert.carbs.value}}</td>
-          <td md-cell>{{dessert.protein.value | number: 1}}</td>
-          <td md-cell>{{dessert.sodium.value}}</td>
-          <td md-cell>{{dessert.calcium.value}}{{dessert.calcium.unit}}</td>
-          <td md-cell>{{dessert.iron.value}}{{dessert.iron.unit}}</td>
+        <tr md-row md-select="dessert" md-select-id="name" md-auto-select ng-repeat="product in vm.products">
+          <td md-cell>{{product.name}}</td>
+          <td md-cell>{{product.price | filter: currency}}</td>
+          <td md-cell>{{product.company}}</td>
+          <td md-cell>{{product.type}}</td>
+          <td md-cell>
+            <md-button class="md-raised md-primary" ng-click="vm.showAddRemove()" >Order</md-button>
+          </td>
         </tr>
         </tbody>
       </table>
     </md-table-container>
-
+  </div>
+    <md-button class="md-fab md-mini md-primary floating-btn" aria-label="Use Android" ng-click="vm.showAddProduct()">
+    +
+    </md-button>
 
 
   </section>

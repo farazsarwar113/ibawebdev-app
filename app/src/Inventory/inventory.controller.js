@@ -1,6 +1,6 @@
 /**
  * @ngdoc controller
- * @name app.Login.controller:Login
+ * @name app.Inventory.controller:Inventory
  * @description < description placeholder >
  */
 
@@ -9,16 +9,15 @@
   'use strict';
 
 	angular
-		.module('app.Login')
-		.controller('Login', Login);
+		.module('app.Inventory')
+		.controller('Inventory', Inventory);
 
   /* @ngInject */
-	function Login($state){
+	function Inventory(){
 		var vm = this;
 
-    vm.user = {};
-
-		vm.login = login;
+		vm.testFunction = testFunction;
+    
 
     /////////////////////
 
@@ -26,13 +25,12 @@
      * @ngdoc method
      * @name testFunction
      * @param {number} num number is the number of the number
-     * @methodOf app.Login.controller:Login
+     * @methodOf app.Inventory.controller:Inventory
      * @description
      * My Description rules
      */
-    function login(){
-      console.log(vm.user);
-      $state.go('Dashboard');
+    function testFunction(num){
+			console.info('This is a test function');
 		}
 	}
 

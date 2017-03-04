@@ -13,10 +13,17 @@
       'app.common',
       'app.Login',
       'app.Signup',
-      'app.Dashboard'
+      'app.Dashboard',
+      'app.AllEmployees',
+      'app.Supplier',
+      'app.Customer',
+      'app.Inventory',
+      'app.Product'
     ])
 
 }());
+
+
 
 
 

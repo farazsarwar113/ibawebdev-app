@@ -1,3 +1,12 @@
+.floating-btn {
+  position: absolute;
+  bottom: 0;
+  right: 0;
+  font-size: 3em;
+  margin: 1em;
+  width: 1.5em !important;
+  height: 1.5em !important; }
+
 .welcome .message {
   color: red;
   font-weight: bold; }
@@ -66,7 +75,7 @@
     margin-right: auto;
     margin-left: auto;
     padding-bottom: 50px; }
-  #login .login_page_wrapper .login_box_container .login_box .login_body form .input_fields {
+  #login .login_page_wrapper .login_box_container .login_box .login_body .form .input_fields {
     font-family: "raleway", sans-serif;
     font-size: 16px;
     font-weight: 300;
@@ -78,7 +87,7 @@
     margin: 35px auto;
     width: 100%;
     padding-left: 15px; }
-  #login .login_page_wrapper .login_box_container .login_box .login_body form .button_login {
+  #login .login_page_wrapper .login_box_container .login_box .login_body .form .button_login {
     margin-top: 20px;
     display: block;
     width: 100%;
@@ -94,7 +103,7 @@
     border: none;
     outline: none;
     text-decoration: none; }
-  #login .login_page_wrapper .login_box_container .login_box .login_body form .button_login:hover {
+  #login .login_page_wrapper .login_box_container .login_box .login_body .form .button_login:hover {
     border: none;
     outline: none;
     text-decoration: none;
@@ -110,12 +119,12 @@
     padding: 10px 16px;
     letter-spacing: 0.08em;
     line-height: 30px !important; }
-  #login .login_page_wrapper .login_box_container .login_box .login_body form .text-right a {
+  #login .login_page_wrapper .login_box_container .login_box .login_body .form .text-right a {
     color: #999999; }
-  #login .login_page_wrapper .login_box_container .login_box .login_body form .text-right a:hover {
+  #login .login_page_wrapper .login_box_container .login_box .login_body .form .text-right a:hover {
     color: #245ba2;
     text-decoration: none; }
-  #login .login_page_wrapper .login_box_container .login_box .login_body form .text-right a:focus {
+  #login .login_page_wrapper .login_box_container .login_box .login_body .form .text-right a:focus {
     text-decoration: none; }
 
 #signup {
@@ -228,5 +237,40 @@
     text-decoration: none; }
   #signup .login_page_wrapper .login_box_container .login_box .login_body form .text-right a:focus {
     text-decoration: none; }
+
+[ui-view].ng-enter, [ui-view].ng-leave {
+  position: absolute;
+  left: 0;
+  right: 0;
+  -webkit-transition: all .5s ease-in-out;
+  -moz-transition: all .5s ease-in-out;
+  -o-transition: all .5s ease-in-out;
+  transition: all .5s ease-in-out; }
+
+[ui-view].ng-enter {
+  opacity: 0;
+  -webkit-transform: scale3d(0.5, 0.5, 0.5);
+  -moz-transform: scale3d(0.5, 0.5, 0.5);
+  transform: scale3d(0.5, 0.5, 0.5); }
+
+[ui-view].ng-enter-active {
+  opacity: 1;
+  -webkit-transform: scale3d(1, 1, 1);
+  -moz-transform: scale3d(1, 1, 1);
+  transform: scale3d(1, 1, 1); }
+
+[ui-view].ng-leave {
+  opacity: 1;
+  /*padding-left: 0px;*/
+  -webkit-transform: translate3d(0, 0, 0);
+  -moz-transform: translate3d(0, 0, 0);
+  transform: translate3d(0, 0, 0); }
+
+[ui-view].ng-leave-active {
+  opacity: 0;
+  /*padding-left: 100px;*/
+  -webkit-transform: translate3d(100px, 0, 0);
+  -moz-transform: translate3d(100px, 0, 0);
+  transform: translate3d(100px, 0, 0); }
 
 /*# sourceMappingURL=main.css.map */
