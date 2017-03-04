@@ -20,7 +20,12 @@
      .state('Inventory', {
        url:'/inventory',
        templateUrl:'src/Inventory/inventory.html',
-       controller: 'Inventory as vm'
+       controller: 'Inventory as vm',
+        resolve :{
+            r_inventory : function () {
+                return dataService.inventory.getAllInventory();
+            }
+        }
      }
     );
   }

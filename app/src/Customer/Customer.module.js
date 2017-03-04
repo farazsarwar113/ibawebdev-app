@@ -20,7 +20,12 @@
      .state('Customer', {
        url:'/customer',
        templateUrl:'src/Customer/customer.html',
-       controller: 'Customer as vm'
+       controller: 'Customer as vm',
+         resolve :{
+             r_cust : function () {
+                 return dataService.customer.get();
+             }
+         }
      }
     );
   }
