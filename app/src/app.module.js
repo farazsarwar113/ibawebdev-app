@@ -14,7 +14,10 @@
       'app.Login',
       'app.Signup',
       'app.Dashboard',
-      'app.AllEmployees'
+      'app.AllEmployees',
+      'app.Supplier',
+      'app.Customer',
+      'app.Inventory'
     ])
 
 }());
@@ -25,4 +28,4 @@
 
 
 
-'app.Supplier'
+
