@@ -1,0 +1,232 @@
+.welcome .message {
+  color: red;
+  font-weight: bold; }
+
+#login {
+  @import "https://fonts.googleapis.com/css?family=Raleway:300,700"; }
+  #login .signup-text {
+    font-size: 14px; }
+  #login .signup-click {
+    cursor: pointer;
+    color: #E91E63; }
+  #login html {
+    font-family: sans-serif;
+    -ms-text-size-adjust: 100%;
+    -webkit-text-size-adjust: 100%; }
+  #login body {
+    margin: 0; }
+  #login .login_page_wrapper {
+    background-color: rgba(158, 158, 158, 0.63);
+    min-height: 100vh; }
+  #login .login_page_wrapper .signup_strip {
+    background-color: #245ba2; }
+  #login .login_page_wrapper .signup_strip p {
+    font-family: "raleway", sans-serif;
+    font-size: 16px;
+    font-weight: 300;
+    color: #ffffff;
+    padding: 17px 0;
+    margin: 0; }
+  #login .login_page_wrapper .signup_strip p a {
+    font-family: "raleway", sans-serif;
+    font-size: 16px;
+    font-weight: 300;
+    color: #fade7d;
+    text-transform: uppercase;
+    margin-left: 8px; }
+  #login .login_page_wrapper .login_box_container {
+    top: 50%;
+    left: 50%;
+    text-align: center;
+    max-width: 400px;
+    width: 100%;
+    position: absolute;
+    -webkit-transform: translate(-50%, -50%);
+    -ms-transform: translate(-50%, -50%);
+    transform: translate(-50%, -50%); }
+  #login .login_page_wrapper .login_box_container .login_box {
+    border-radius: 2px;
+    background-color: #ffffff;
+    box-shadow: 0 2px 10px 0 rgba(0, 0, 0, 0.16), 0 2px 5px 0 rgba(0, 0, 0, 0.26); }
+  #login .login_page_wrapper .login_box_container .login_box .login_header h1 {
+    background: linear-gradient(60deg, #E91E63, #F44336);
+    border-radius: 6px;
+    font-family: "raleway", sans-serif;
+    font-size: 26px;
+    font-weight: 300;
+    color: #ffffff;
+    padding: 70px 0;
+    width: 350px;
+    margin-right: auto;
+    margin-left: auto;
+    transform: translateY(-50px); }
+  #login .login_page_wrapper .login_box_container .login_box .login_body {
+    max-width: 270px;
+    width: 100%;
+    margin-right: auto;
+    margin-left: auto;
+    padding-bottom: 50px; }
+  #login .login_page_wrapper .login_box_container .login_box .login_body form .input_fields {
+    font-family: "raleway", sans-serif;
+    font-size: 16px;
+    font-weight: 300;
+    color: #181818;
+    line-height: 46px;
+    display: block;
+    border: none;
+    border-bottom: 2px solid rgba(0, 0, 0, 0.12);
+    margin: 35px auto;
+    width: 100%;
+    padding-left: 15px; }
+  #login .login_page_wrapper .login_box_container .login_box .login_body form .button_login {
+    margin-top: 20px;
+    display: block;
+    width: 100%;
+    background: linear-gradient(60deg, #E91E63, #F44336);
+    font-family: "raleway", sans-serif;
+    font-size: 16px;
+    font-weight: 700;
+    color: #ffffff;
+    text-transform: uppercase;
+    padding: 10px 16px;
+    letter-spacing: 0.08em;
+    line-height: 30px !important;
+    border: none;
+    outline: none;
+    text-decoration: none; }
+  #login .login_page_wrapper .login_box_container .login_box .login_body form .button_login:hover {
+    border: none;
+    outline: none;
+    text-decoration: none;
+    margin-top: 20px;
+    display: block;
+    width: 100%;
+    background: linear-gradient(60deg, #ab47bc, #7b1fa2);
+    font-family: "raleway", sans-serif;
+    font-size: 16px;
+    font-weight: 700;
+    color: #ffffff;
+    text-transform: uppercase;
+    padding: 10px 16px;
+    letter-spacing: 0.08em;
+    line-height: 30px !important; }
+  #login .login_page_wrapper .login_box_container .login_box .login_body form .text-right a {
+    color: #999999; }
+  #login .login_page_wrapper .login_box_container .login_box .login_body form .text-right a:hover {
+    color: #245ba2;
+    text-decoration: none; }
+  #login .login_page_wrapper .login_box_container .login_box .login_body form .text-right a:focus {
+    text-decoration: none; }
+
+#signup {
+  @import "https://fonts.googleapis.com/css?family=Raleway:300,700"; }
+  #signup html {
+    font-family: sans-serif;
+    -ms-text-size-adjust: 100%;
+    -webkit-text-size-adjust: 100%; }
+  #signup body {
+    margin: 0; }
+  #signup .login_page_wrapper {
+    background-color: rgba(158, 158, 158, 0.63);
+    min-height: 100vh; }
+  #signup .login_page_wrapper .signup_strip {
+    background-color: #245ba2; }
+  #signup .login_page_wrapper .signup_strip p {
+    font-family: "raleway", sans-serif;
+    font-size: 16px;
+    font-weight: 300;
+    color: #ffffff;
+    padding: 17px 0;
+    margin: 0; }
+  #signup .login_page_wrapper .signup_strip p a {
+    font-family: "raleway", sans-serif;
+    font-size: 16px;
+    font-weight: 300;
+    color: #fade7d;
+    text-transform: uppercase;
+    margin-left: 8px; }
+  #signup .login_page_wrapper .login_box_container {
+    top: 50%;
+    left: 50%;
+    text-align: center;
+    max-width: 400px;
+    width: 100%;
+    position: absolute;
+    -webkit-transform: translate(-50%, -50%);
+    -ms-transform: translate(-50%, -50%);
+    transform: translate(-50%, -50%); }
+  #signup .login_page_wrapper .login_box_container .login_box {
+    border-radius: 2px;
+    background-color: #ffffff;
+    box-shadow: 0 2px 10px 0 rgba(0, 0, 0, 0.16), 0 2px 5px 0 rgba(0, 0, 0, 0.26); }
+  #signup .login_page_wrapper .login_box_container .login_box .login_header h1 {
+    background: linear-gradient(60deg, #1ed0e9, #f436ef);
+    border-radius: 6px;
+    font-family: "raleway", sans-serif;
+    font-size: 26px;
+    font-weight: 300;
+    color: #ffffff;
+    padding: 70px 0;
+    width: 350px;
+    margin-right: auto;
+    margin-left: auto;
+    transform: translateY(-50px); }
+  #signup .login_page_wrapper .login_box_container .login_box .login_body {
+    max-width: 270px;
+    width: 100%;
+    margin-right: auto;
+    margin-left: auto;
+    padding-bottom: 50px; }
+  #signup .login_page_wrapper .login_box_container .login_box .login_body form .input_fields {
+    font-family: "raleway", sans-serif;
+    font-size: 16px;
+    font-weight: 300;
+    color: #181818;
+    line-height: 46px;
+    display: block;
+    border: none;
+    border-bottom: 2px solid rgba(0, 0, 0, 0.12);
+    margin: 10px auto;
+    width: 100%;
+    padding-left: 15px; }
+  #signup .login_page_wrapper .login_box_container .login_box .login_body form .button_login {
+    margin-top: 20px;
+    display: block;
+    width: 100%;
+    background: linear-gradient(60deg, #1ed0e9, #f436ef);
+    font-family: "raleway", sans-serif;
+    font-size: 16px;
+    font-weight: 700;
+    color: #ffffff;
+    text-transform: uppercase;
+    padding: 10px 16px;
+    letter-spacing: 0.08em;
+    line-height: 30px !important;
+    border: none;
+    outline: none;
+    text-decoration: none; }
+  #signup .login_page_wrapper .login_box_container .login_box .login_body form .button_login:hover {
+    border: none;
+    outline: none;
+    text-decoration: none;
+    margin-top: 20px;
+    display: block;
+    width: 100%;
+    background: linear-gradient(60deg, #bc4a47, #9c50bd);
+    font-family: "raleway", sans-serif;
+    font-size: 16px;
+    font-weight: 700;
+    color: #ffffff;
+    text-transform: uppercase;
+    padding: 10px 16px;
+    letter-spacing: 0.08em;
+    line-height: 30px !important; }
+  #signup .login_page_wrapper .login_box_container .login_box .login_body form .text-right a {
+    color: #999999; }
+  #signup .login_page_wrapper .login_box_container .login_box .login_body form .text-right a:hover {
+    color: #245ba2;
+    text-decoration: none; }
+  #signup .login_page_wrapper .login_box_container .login_box .login_body form .text-right a:focus {
+    text-decoration: none; }
+
+/*# sourceMappingURL=main.css.map */
