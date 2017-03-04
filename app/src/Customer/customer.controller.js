@@ -4,19 +4,21 @@
  * @description < description placeholder >
  */
 
-(function(){
+(function () {
 
   'use strict';
 
-	angular
-		.module('app.Customer')
-		.controller('Customer', Customer);
+  angular
+    .module('app.Customer')
+    .controller('Customer', Customer);
 
   /* @ngInject */
-	function Customer(){
-		var vm = this;
+  function Customer() {
+    var vm = this;
 
-		vm.testFunction = testFunction;
+    vm.testFunction = testFunction;
+    vm.status = status;
+
 
     /////////////////////
 
@@ -28,9 +30,16 @@
      * @description
      * My Description rules
      */
-    function testFunction(num){
-			console.info('This is a test function');
-		}
-	}
+    function testFunction(num) {
+      console.info('This is a test function');
+    }
+
+    function status(status1) {
+      if (status1 == 0)
+        return "Placed"
+      else if (status1 == 1)
+        return "Delivered"
+    }
+  }
 
 }());

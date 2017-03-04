@@ -17,7 +17,8 @@
       'app.AllEmployees',
       'app.Supplier',
       'app.Customer',
-      'app.Inventory'
+      'app.Inventory',
+      'app.Product'
     ])
 
 }());

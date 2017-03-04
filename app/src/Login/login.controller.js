@@ -33,7 +33,6 @@
     function login(){
       console.log(vm.user);
       $state.go('Dashboard');
-
 		}
 	}
 

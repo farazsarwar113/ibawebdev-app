@@ -17,6 +17,7 @@
 		var vm = this;
 
 		vm.testFunction = testFunction;
+    
 
     /////////////////////
 

@@ -16,13 +16,13 @@
   function configuration($stateProvider){
 
     //add your state mappings here
-    //$stateProvider
-    //  .state('Welcome', {
-    //    url:'/welcome',
-    //    templateUrl:'src/welcome/welcome.html',
-    //    controller: 'WelcomeCtrl as vm'
-    //  }
-    //);
+    $stateProvider
+     .state('Customer', {
+       url:'/customer',
+       templateUrl:'src/Customer/customer.html',
+       controller: 'Customer as vm'
+     }
+    );
   }
 
 }());

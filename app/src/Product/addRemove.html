@@ -1,0 +1,22 @@
+<md-dialog style="width: 25%">
+  <md-toolbar>
+    <div class="md-toolbar-tools">
+      <h2>Place Order</h2>
+      <div flex></div>
+      <md-button style="width: auto; float: right;" class="md-icon-button" ng-click="cancel()">
+        Close
+      </md-button>
+    </div>
+  </md-toolbar>
+  <md-content class="md-no-momentum">
+
+    <md-card md-theme="{{ showDarkTheme ? 'dark-grey' : 'default' }}" md-theme-watch>
+      <div style="display:flex; justify-content: center;">
+        <md-button class="md-warn" ng-click="minus()">-</md-button>
+        <span style="margin-top: 13px;font-size: 1.2em;">{{order}}</span>
+        <md-button class="md-primary" ng-click="plus()">+</md-button>
+
+      </div>
+    </md-card>
+  </md-content>
+</md-dialog>

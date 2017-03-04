@@ -4,19 +4,22 @@
  * @description < description placeholder >
  */
 
-(function(){
+(function () {
 
   'use strict';
 
-	angular
-		.module('app.AllEmployees')
-		.controller('AllEmployees', AllEmployees);
+  angular
+    .module('app.AllEmployees')
+    .controller('AllEmployees', AllEmployees);
 
   /* @ngInject */
-	function AllEmployees(){
-		var vm = this;
+  function AllEmployees(dataService) {
+    var vm = this;
 
-		vm.testFunction = testFunction;
+    vm.testFunction = testFunction;
+    vm.getRole = getRole;
+    vm.toggleRole = toggleRole;
+
 
     /////////////////////
 
@@ -28,9 +31,28 @@
      * @description
      * My Description rules
      */
-    function testFunction(num){
-			console.info('This is a test function');
-		}
-	}
+    function testFunction(num) {
+      console.info('This is a test function');
+    }
+
+    function toggleRole(emp) {
+      dataService.employee.toogleRole.then(function (res) {
+          console.log(res);
+
+        },
+        function (err) {
+          console.log(err);
+
+        });
+    }
+
+    function getRole(role) {
+      if (role == true) {
+        return "Admin"
+      }
+      else
+        return "Not Admin"
+    }
+  }
 
 }());
