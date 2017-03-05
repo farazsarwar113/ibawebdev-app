@@ -23,7 +23,7 @@
        controller: 'Product as vm',
        resolve: {
          r_products: function (dataService) {
-           // return dataService
+            return dataService.products.getAllProducts();
          }
        }
      }

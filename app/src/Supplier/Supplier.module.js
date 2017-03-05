@@ -20,7 +20,12 @@
      .state('Supplier', {
        url:'/supplier',
        templateUrl:'src/Supplier/supplier.html',
-       controller: 'Supplier as vm'
+       controller: 'Supplier as vm',
+       resolve :{
+         r_supp : function (dataService) {
+           return dataService.Suplier.getProducts();
+         }
+       }
      }
     );
   }

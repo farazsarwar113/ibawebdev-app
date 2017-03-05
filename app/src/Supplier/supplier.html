@@ -2,47 +2,9 @@
 
   <section layout="row" flex>
 
-    <md-sidenav
-      class="md-sidenav-left"
-      md-component-id="left"
-      md-is-locked-open="$mdMedia('gt-md')"
-      md-whiteframe="4">
-
-      <md-toolbar class="md-theme-indigo" ui-sref="">
-        <h1 class="md-toolbar-tools">Intkhab Supply Depot</h1>
-      </md-toolbar>
-      <md-content >
-        <md-list flex>
-          <md-list-item class="md-3-line" ui-sref="Dashboard">
-            Dashboard
-          </md-list-item>
-          <md-list-item class="md-3-line" ui-sref="AllEmployees">
-            All Employees
-          </md-list-item>
-          <md-list-item class="md-3-line" ui-sref="Supplier">
-            Suppliers
-          </md-list-item>
-          <md-list-item class="md-3-line" ui-sref="Customer">
-            Customers
-          </md-list-item>
-          <md-list-item class="md-3-line" ui-sref="Inventory">
-            Inventory
-          </md-list-item>
-          <md-list-item class="md-3-line" ui-sref="Product">
-            Product
-          </md-list-item>
-          <md-list-item class="md-3-line" ui-sref="Login">
-            Logout
-          </md-list-item>
-        </md-list>
-      </md-content>
-
-    </md-sidenav>
-    </md-content>
-
     <!-- exact table from live demo -->
     <md-table-container>
-      <table md-table md-row-select multiple ng-model="selected" md-progress="promise">
+      <table md-table md-row-select multiple md-progress="promise">
         <thead md-head md-order="query.order" md-on-reorder="getDesserts">
         <tr md-row>
           <th md-column md-order-by="nameToLower"><span>Customer Name</span></th>

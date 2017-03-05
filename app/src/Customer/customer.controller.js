@@ -13,7 +13,7 @@
     .controller('Customer', Customer);
 
   /* @ngInject */
-  function Customer() {
+  function Customer(r_cust) {
     var vm = this;
 
     vm.testFunction = testFunction;

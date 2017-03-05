@@ -20,7 +20,12 @@
      .state('AllEmployees', {
        url:'/allEmployees',
        templateUrl:'src/AllEmployees/allEmployees.html',
-       controller: 'AllEmployees as vm'
+       controller: 'AllEmployees as vm',
+       resolve : {
+         r_employees : function (dataService) {
+            return dataService.employee.getAllEmployes()
+       }
+       }
      }
     );
   }

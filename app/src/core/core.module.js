@@ -13,7 +13,9 @@
     'restangular',
     'ngMaterial',
     'md.data.table',
-    'nvd3'
+    'ngAnimate',
+    'nvd3',
+    'ngStorage'
   ]);
 
 }());

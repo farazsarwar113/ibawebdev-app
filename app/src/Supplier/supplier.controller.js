@@ -13,13 +13,13 @@
 		.controller('Supplier', Supplier);
 
   /* @ngInject */
-	function Supplier(){
+	function Supplier(r_supp){
 		var vm = this;
 
 		vm.testFunction = testFunction;
+    vm.supplier = r_supp.data;
 
 
-    
 
 
     /////////////////////

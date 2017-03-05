@@ -5,17 +5,54 @@
     <title ng-bind="pageTitle"></title>
     <!-- build:css styles/main.css -->
     <!-- bower:css -->
-    <link rel="stylesheet" href="bower_components/angular-material/angular-material.css"/>
-    <link rel="stylesheet" href="bower_components/angular-material-data-table/dist/md-data-table.css"/>
-    <link rel="stylesheet" href="bower_components/animate.css/animate.css"/>
-    <link rel="stylesheet" href="bower_components/nvd3/build/nv.d3.css"/>
+    <link rel="stylesheet" href="bower_components/angular-material/angular-material.css" />
+    <link rel="stylesheet" href="bower_components/angular-material-data-table/dist/md-data-table.css" />
+    <link rel="stylesheet" href="bower_components/animate.css/animate.css" />
+    <link rel="stylesheet" href="bower_components/nvd3/build/nv.d3.css" />
     <!-- endbower -->
     <link rel="stylesheet" href="styles/css/main.css"/>
     <!-- endbuild -->
 </head>
 
 <body class="container">
-<div ui-view></div>
+
+<md-sidenav
+  class="md-sidenav-left custom-grid"
+  md-component-id="left"
+  md-is-locked-open="$mdMedia('gt-md')"
+  md-whiteframe="4" ng-if="$root.isSidemenuHidden()">
+
+  <md-toolbar class="md-theme-indigo">
+    <h1 class="md-toolbar-tools">Intkhab Supply Depot</h1>
+  </md-toolbar>
+  <md-content >
+    <md-list flex>
+      <md-list-item class="md-3-line" ui-sref="Dashboard">
+        Dashboard
+      </md-list-item>
+      <md-list-item class="md-3-line" ui-sref="AllEmployees">
+        All Employees
+      </md-list-item>
+      <md-list-item class="md-3-line" ui-sref="Supplier">
+        Suppliers
+      </md-list-item>
+      <md-list-item class="md-3-line" ui-sref="Customer">
+        Customers
+      </md-list-item>
+      <md-list-item class="md-3-line" ui-sref="Inventory">
+        Inventory
+      </md-list-item>
+      <md-list-item class="md-3-line" ui-sref="Product">
+        Product
+      </md-list-item>
+      <md-list-item class="md-3-line" ui-sref="Login">
+        Logout
+      </md-list-item>
+    </md-list>
+  </md-content>
+
+</md-sidenav>
+  <div ui-view></div>
 </body>
 
 <!-- build:js scripts/app.js -->
@@ -36,6 +73,7 @@
 <script src="bower_components/d3/d3.js"></script>
 <script src="bower_components/nvd3/build/nv.d3.js"></script>
 <script src="bower_components/angular-nvd3/dist/angular-nvd3.js"></script>
+<script src="bower_components/ngstorage/ngStorage.min.js"></script>
 <!-- endbower -->
 <script type="text/javascript" src="src/core/core.module.js"></script>
 <script type="text/javascript" src="src/common/common.module.js"></script>
@@ -46,10 +84,14 @@
 <script type="text/javascript" src="src/Login/Login.module.js"></script>
 <script type="text/javascript" src="src/Signup/Signup.module.js"></script>
 <script type="text/javascript" src="src/Dashboard/Dashboard.module.js"></script>
+<script src="src/Help/Help.module.js"></script>
+<script src="src/Order/Order.module.js"></script>
 <script src="src/Product/Product.module.js"></script>
 <script src="src/Supplier/Supplier.module.js"></script>
 <script src="src/Customer/Customer.module.js"></script>
 <script src="src/Inventory/Inventory.module.js"></script>
+<script src="src/common/common.run.js"></script>
+<script type="text/javascript" src="src/common/dataService.factory.js"></script>
 <script type="text/javascript" src="src/core/restangular.config.js"></script>
 <script type="text/javascript" src="src/core/router.config.js"></script>
 <script type="text/javascript" src="src/core/httpStatus.constant.js"></script>
@@ -57,12 +99,13 @@
 <script type="text/javascript" src="src/Login/login.controller.js"></script>
 <script type="text/javascript" src="src/Signup/signup.controller.js"></script>
 <script type="text/javascript" src="src/Dashboard/dashboard.controller.js"></script>
-<script type="text/javascript" src="src/common/dataService.factory.js"></script>
 <script type="text/javascript" src="src/AllEmployees/allemployees.controller.js"></script>
 <script src="src/Supplier/supplier.controller.js"></script>
 <script src="src/Customer/customer.controller.js"></script>
 <script src="src/Inventory/inventory.controller.js"></script>
 <script src="src/Product/product.controller.js"></script>
+<script src="src/Order/order.controller.js"></script>
+<script src="src/Help/help.controller.js"></script>
 <!-- endbuild -->
 
 </html>

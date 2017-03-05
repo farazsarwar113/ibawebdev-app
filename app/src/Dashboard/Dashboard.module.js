@@ -20,7 +20,12 @@
      .state('Dashboard', {
        url:'/dashboard',
        templateUrl:'src/Dashboard/dashboard.html',
-       controller: 'Dashboard as vm'
+       controller: 'Dashboard as vm',
+       resolve :{
+         r_data : function (dataService) {
+           return dataService.stats.getStats();
+         }
+       }
      }
     );
   }

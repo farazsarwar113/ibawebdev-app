@@ -4,23 +4,23 @@
  * @description < description placeholder >
  */
 
-(function(){
+(function () {
 
   'use strict';
 
-	angular
-		.module('app.Dashboard')
-		.controller('Dashboard', Dashboard);
+  angular
+    .module('app.Dashboard')
+    .controller('Dashboard', Dashboard);
 
   /* @ngInject */
-	function Dashboard($scope, $timeout, $mdSidenav, $log){
-		var vm = this;
+  function Dashboard($scope, $timeout, $mdSidenav, $log,r_data) {
+    var vm = this;
 
-		vm.testFunction = testFunction;
+    vm.testFunction = testFunction;
 
     $scope.toggleLeft = buildDelayedToggler('left');
     $scope.toggleRight = buildToggler('right');
-    $scope.isOpenRight = function(){
+    $scope.isOpenRight = function () {
       return $mdSidenav('right').isOpen();
     };
     function debounce(func, wait, context) {
@@ -30,7 +30,7 @@
         var context = $scope,
           args = Array.prototype.slice.call(arguments);
         $timeout.cancel(timer);
-        timer = $timeout(function() {
+        timer = $timeout(function () {
           timer = undefined;
           func.apply(context, args);
         }, wait || 10);
@@ -42,7 +42,7 @@
      * report completion in console
      */
     function buildDelayedToggler(navID) {
-      return debounce(function() {
+      return debounce(function () {
         // Component lookup should always be available since we are not using `ng-if`
         $mdSidenav(navID)
           .toggle()
@@ -53,7 +53,7 @@
     }
 
     function buildToggler(navID) {
-      return function() {
+      return function () {
         // Component lookup should always be available since we are not using `ng-if`
         $mdSidenav(navID)
           .toggle()
@@ -62,8 +62,14 @@
           });
       };
     }
-    /////////////////////
 
+    /////////////////////
+    var data = r_data.data;
+    vm.totalOrderAmount = data.total_order
+    vm.totalSalesAmount = data.salesTotal;
+    vm.totalPurchaseAmount = data.purchaseTotal;
+    vm.totalSales = data.salesTotal;
+    vm.totalPurchase = data.purchase;
     /**
      * @ngdoc method
      * @name testFunction
@@ -72,13 +78,11 @@
      * @description
      * My Description rules
      */
-    function testFunction(num){
-			console.info('This is a test function');
-		}
+    function testFunction(num) {
+      console.info('This is a test function');
+    }
 
 
-
-
-	}
+  }
 
 }());

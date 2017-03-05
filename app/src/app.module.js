@@ -18,10 +18,13 @@
       'app.Supplier',
       'app.Customer',
       'app.Inventory',
-      'app.Product'
+      'app.Product',
+       'app.Order',
+      'app.Help'
     ])
 
 }());
+
 
 
 

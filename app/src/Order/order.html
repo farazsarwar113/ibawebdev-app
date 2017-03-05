@@ -1,0 +1,33 @@
+<div layout="column" style="height:100vh;" ng-cloak>
+
+  <section layout="row" flex>
+
+    <!-- exact table from live demo -->
+    <md-table-container>
+      <table md-table md-row-select multiple md-progress="promise">
+        <thead md-head md-order="query.order" md-on-reorder="getDesserts">
+        <tr md-row>
+          <th md-column md-order-by="nameToLower"><span>Product Name</span></th>
+          <th md-column md-numeric md-order-by="calories.value"><span>Date</span></th>
+          <th md-column md-numeric md-order-by="calories.value"><span>Status</span></th>
+          <th md-column md-numeric md-order-by="calories.value"><span>Total Bill</span></th>
+          <th md-column md-numeric md-order-by="calories.value"><span>User</span></th>
+        </tr>
+        </thead>
+        <tbody md-body>
+        <tr md-row md-select="dessert" md-select-id="name" md-auto-select ng-repeat="order in vm.order">
+          <td md-cell>{{order.product.name}}</td>
+          <td md-cell>{{order.date}}</td>
+          <td md-cell>{{order.status}}</td>
+          <td md-cell>{{order.total_bill}}</td>
+          <td md-cell>{{order.user.name}}</td>
+        </tr>
+        </tbody>
+      </table>
+    </md-table-container>
+
+
+
+  </section>
+
+</div>

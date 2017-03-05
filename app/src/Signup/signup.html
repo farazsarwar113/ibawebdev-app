@@ -11,14 +11,19 @@
             </div>
 
             <div class="login_body">
-              <form>
-                <input type="text" placeholder="Username" name="email" class="input_fields" ng-model="user.username">
-                <input type="text" placeholder="Email" name="email" class="input_fields" ng-model="user.email">
-                <input type="text" placeholder="First Name" name="firstname" class="input_fields" ng-model="user.firstname">
-                <input type="text" placeholder="Last Name" name="lastname" class="input_fields" ng-model="user.lastname">
-                <input type="password" placeholder="Password" name="password" class="input_fields" ng-model="user.password">
-                <input type="password" placeholder="Re-Enter Password" name="repassword" class="input_fields" ng-model="user.repassword">
-                <button class="btn button_login" ng-click="login()">Go Explore!</button>
+              <form ng-submit="vm.register()">
+                <input type="text" placeholder="Username" name="email" class="input_fields" ng-model="vm.account.username">
+                <input type="text" placeholder="Email" name="email" class="input_fields" ng-model="vm.account.email">
+                <input type="text" placeholder="First Name" name="firstname" class="input_fields" ng-model="vm.account.firstname">
+                <input type="text" placeholder="Last Name" name="lastname" class="input_fields" ng-model="vm.account.lastname">
+                <input type="password" placeholder="Password" name="password" class="input_fields" ng-model="vm.account.password">
+                <input type="password" placeholder="Re-Enter Password" name="repassword" class="input_fields" ng-model="vm.account.repassword">
+                <md-radio-group style="display: block;width: 103%;" ng-model="vm.account.role">
+                  <md-radio-button style="display: inline;    font-size: 15px;" value="1" class="md-primary">Employee</md-radio-button>
+                  <md-radio-button style="display: inline;    font-size: 15px;" value="0" class="md-primary"> Customer </md-radio-button>
+                  <md-radio-button style="display: inline;    font-size: 15px;" value="2" class="md-primary">Supplier</md-radio-button>
+                </md-radio-group>
+                <button type="submit" class="btn button_login">Go Explore!</button>
               </form>
             </div>
           </div>

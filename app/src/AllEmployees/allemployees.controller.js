@@ -13,13 +13,14 @@
     .controller('AllEmployees', AllEmployees);
 
   /* @ngInject */
-  function AllEmployees(dataService) {
+  function AllEmployees(dataService, r_employees) {
     var vm = this;
 
     vm.testFunction = testFunction;
     vm.getRole = getRole;
     vm.toggleRole = toggleRole;
 
+    
 
     /////////////////////
 

@@ -7,3 +7,22 @@
   width: 1.5em !important;
   height: 1.5em !important;
 }
+
+.custom-grid{
+  display: inline-block;
+  width: auto;
+  float: left;
+  height: 100%;
+}
+
+md-radio-button .md-label {
+  margin-left: 22px;
+  color: #5e5e5e;
+}
+
+.add-product-button{
+  display: block;
+  width: 50%;
+  margin-left: auto;
+  margin-right: auto;
+}
