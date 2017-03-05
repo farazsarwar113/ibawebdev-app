@@ -131,6 +131,24 @@ NG_DOCS={
     },
     {
       "section": "api",
+      "id": "app.Help",
+      "shortName": "app.Help",
+      "type": "overview",
+      "moduleName": "app.Help",
+      "shortDescription": "&lt; description placeholder &gt;",
+      "keywords": "api app description help overview placeholder"
+    },
+    {
+      "section": "api",
+      "id": "app.Help.controller:Help",
+      "shortName": "Help",
+      "type": "controller",
+      "moduleName": "app.Help",
+      "shortDescription": "&lt; description placeholder &gt;",
+      "keywords": "api app controller description help method num number placeholder rules testfunction"
+    },
+    {
+      "section": "api",
       "id": "app.Inventory",
       "shortName": "app.Inventory",
       "type": "overview",
@@ -164,6 +182,24 @@ NG_DOCS={
       "moduleName": "app.Login",
       "shortDescription": "&lt; description placeholder &gt;",
       "keywords": "api app controller description login method num number placeholder rules testfunction"
+    },
+    {
+      "section": "api",
+      "id": "app.Order",
+      "shortName": "app.Order",
+      "type": "overview",
+      "moduleName": "app.Order",
+      "shortDescription": "&lt; description placeholder &gt;",
+      "keywords": "api app description order overview placeholder"
+    },
+    {
+      "section": "api",
+      "id": "app.Order.controller:Order",
+      "shortName": "Order",
+      "type": "controller",
+      "moduleName": "app.Order",
+      "shortDescription": "&lt; description placeholder &gt;",
+      "keywords": "api app controller description method num number order placeholder rules testfunction"
     },
     {
       "section": "api",

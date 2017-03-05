@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html ng-app="app">
+<head lang="en">
+    <meta charset="UTF-8">
+    <title ng-bind="pageTitle"></title>
+    <link rel="stylesheet" href="styles/main.css">
+</head>
+
+<body class="container">
+
+<md-sidenav
+  class="md-sidenav-left custom-grid"
+  md-component-id="left"
+  md-is-locked-open="$mdMedia('gt-md')"
+  md-whiteframe="4" ng-if="$root.isSidemenuHidden()">
+
+  <md-toolbar class="md-theme-indigo">
+    <h1 class="md-toolbar-tools">Intkhab Supply Depot</h1>
+  </md-toolbar>
+  <md-content >
+    <md-list flex>
+      <md-list-item class="md-3-line" ui-sref="Dashboard">
+        Dashboard
+      </md-list-item>
+      <md-list-item class="md-3-line" ui-sref="AllEmployees">
+        All Employees
+      </md-list-item>
+      <md-list-item class="md-3-line" ui-sref="Supplier">
+        Suppliers
+      </md-list-item>
+      <md-list-item class="md-3-line" ui-sref="Customer">
+        Customers
+      </md-list-item>
+      <md-list-item class="md-3-line" ui-sref="Inventory">
+        Inventory
+      </md-list-item>
+      <md-list-item class="md-3-line" ui-sref="Product">
+        Product
+      </md-list-item>
+      <md-list-item class="md-3-line" ui-sref="Login">
+        Logout
+      </md-list-item>
+    </md-list>
+  </md-content>
+
+</md-sidenav>
+  <div ui-view></div>
+</body>
+
+<script src="scripts/app.js"></script>
+
+</html>
