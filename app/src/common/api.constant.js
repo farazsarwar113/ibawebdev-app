@@ -7,7 +7,7 @@
    */
   angular.module('app.core')
   //  .constant('API_URL','http://localhost:3000/');
-  .constant('API_URL','http://192.168.8.101:3000');
-  //   .constant('API_URL','https://iba-web-dev.mybluemix.net/');
+  // .constant('API_URL','http://192.168.8.101:3000');
+    .constant('API_URL','https://iba-web-dev.mybluemix.net/');
 
 }());
